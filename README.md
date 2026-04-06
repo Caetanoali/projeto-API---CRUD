@@ -1,6 +1,8 @@
 Gerenciamento de Clientes (CRUD)
 Este é um projeto simples de cadastro de clientes desenvolvido para praticar manipulação de DOM e consumo de APIs REST utilizando o método fetch. O sistema permite listar, cadastrar e excluir dados de clientes em um banco de dados em nuvem temporário.
 
+  **Este projeto utiliza o CrudCrud para fins de demonstração. Caso os dados não carreguem, o endpoint de 24h pode ter expirado. Basta substituir a URL no código para testar.**
+
 Tecnologias Utilizadas
 HTML5: Estruturação da página e formulários.
 
