@@ -1,26 +1,25 @@
 Gerenciamento de Clientes (CRUD)
-Este é um projeto simples de cadastro de clientes desenvolvido para praticar manipulação de DOM e consumo de APIs REST utilizando o método fetch. O sistema permite listar, cadastrar e excluir dados de clientes em um banco de dados em nuvem temporário.
-
-  **Este projeto utiliza o CrudCrud para fins de demonstração. Caso os dados não carreguem, o endpoint de 24h pode ter expirado. Basta substituir a URL no código para testar.**
+Este é um projeto de cadastro de clientes desenvolvido para praticar a manipulação de DOM e o consumo de APIs REST utilizando o método fetch. O sistema permite listar, cadastrar e excluir dados em tempo real, utilizando um back-end persistente em nuvem.
 
 Tecnologias Utilizadas
 HTML5: Estruturação da página e formulários.
 
-CSS3: Estilização da interface (alinhamento, cores e responsividade).
+CSS3: Estilização da interface, alinhamento, cores e responsividade.
 
-JavaScript (ES6+): Lógica de programação, manipulação de eventos e consumo de API.
+JavaScript (ES6+): Lógica de programação, manipulação de eventos e consumo de API Assíncrona.
 
-CrudCrud: API utilizada para simular o back-end e persistir os dados.
+MockAPI: Ferramenta utilizada para simular o back-end e garantir a persistência dos dados.
 
 Funcionalidades
-Listagem Automática: Ao carregar a página, o sistema busca todos os clientes cadastrados na API.
+Listagem Automática: Ao carregar a página, o sistema busca todos os clientes cadastrados na API e os exibe na tela.
 
-Cadastro: Permite adicionar novos clientes informando Nome e E-mail.
+Cadastro Real-time: Permite adicionar novos clientes informando Nome e E-mail, com atualização imediata da lista.
 
-Exclusão: Botão individual para remover um cliente tanto da interface quanto do banco de dados.
+Exclusão: Botão individual para remover um cliente tanto da interface quanto do banco de dados (API).
 
-Limpeza de Campos: Após o cadastro, os campos de entrada são limpos automaticamente.
+Limpeza de Campos: Após o cadastro, os campos de entrada são limpos automaticamente para uma melhor experiência do usuário.
 
+Deploy
+O projeto está hospedado no GitHub Pages e pode ser acessado através do link abaixo:
 
-**Observação sobre a API: > Este projeto utiliza o CrudCrud, cujos endpoints expiram a cada 24 horas. Caso o sistema pare de funcionar, 
-acesse o site do CrudCrud, gere uma nova URL e substitua a variável url no arquivo scripts.js.**
+https://caetanoali.github.io/projeto-API---CRUD/
