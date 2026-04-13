@@ -1,23 +1,27 @@
+//lista de clientes usando a api
 const clientes = document.getElementById("listaClientes");
 
-fetch("https://crudcrud.com/api/12c73ca9a3324bcf99fa791953d8045c/clientes")
+const url = "https://69dcded784f912a264045401.mockapi.io/clientes";
+
+fetch(url)
 .then(resposta => resposta.json())
 .then((listaDeClientes) => {
-
+    
     listaDeClientes.forEach(itemClientes => {
         const item  = document.createElement("li");
-        item.innerHTML = `${itemClientes.cliente} - ${itemClientes.email} <button onclick="remove('${itemClientes._id}')" class="btnExcluir">X</button>`;
+        item.innerHTML = `${itemClientes.cliente} - ${itemClientes.email} <button onclick="remove('${itemClientes.id}')" class="btnExcluir">X</button>`;
         clientes.appendChild(item);
     });
 })
+.catch(erro => console.error("Erro ao buscar:", erro));
 
-
+//cadastrando um novo cliente
 document.getElementById("btnSalvar").addEventListener("click", () => {
 
     const nomeDigitado = document.getElementById("nome").value;
     const emailDigitado = document.getElementById("email").value;
 
-    fetch("https://crudcrud.com/api/12c73ca9a3324bcf99fa791953d8045c/clientes", {
+    fetch(url, {
 
         method: "POST",
         headers: {
@@ -33,7 +37,7 @@ document.getElementById("btnSalvar").addEventListener("click", () => {
     .then(resposta => resposta.json())
     .then((itemClientes) => {
         const item  = document.createElement("li");
-        item.innerHTML = `${itemClientes.cliente} - ${itemClientes.email} <button onclick="remove('${itemClientes._id}')" class="btnExcluir">X</button>`;
+        item.innerHTML = `${itemClientes.cliente} - ${itemClientes.email} <button onclick="remove('${itemClientes.id}')" class="btnExcluir">X</button>`;
         clientes.appendChild(item);
 
 
@@ -43,10 +47,11 @@ document.getElementById("btnSalvar").addEventListener("click", () => {
 
 })
 
+//função de remoção 
 function remove(id) {
-    const url = `https://crudcrud.com/api/12c73ca9a3324bcf99fa791953d8045c/clientes/${id}`;
+    const urlDelete = `${url}/${id}`;
 
-    fetch(url, {
+    fetch(urlDelete, {
         method: "DELETE"
     })
 
